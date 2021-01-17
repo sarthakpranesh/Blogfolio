@@ -1,5 +1,68 @@
 {{ define "main" }}
-<div class="container">
-  <h1 class="title">{{ .Site.Title }}</h1>
+<style>
+  #main-container > h1, h3 {
+    margin: 0px;
+  }
+
+  #what-section > #interests {
+    margin-top: 25px;
+  }
+</style>
+<!-- Main landing section -->
+<div class="container-wrapper" id="main-container">
+  <h1>{{ .Site.Params.author }}</h1>
+  <h4>{{ .Site.Params.shortAbout }}</h4>
+</div>
+
+<!-- About me section -->
+<div class="short-container-wrapper">
+  <div class="row">
+    <div class="col l6 offset-l3 s12">
+      <h4>About Me</h4>
+      <p>
+        {{ .Site.Params.about }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- What I do section -->
+<div class="short-container-wrapper" id="what-section">
+  <div class="row">
+    <div class="col l6 offset-l3 s12">
+      <h4>What I Love To Do</h4>
+      <div id="interests">
+        {{ range .Site.Params.interests }}
+          <div class="chip">
+            {{ . }}
+          </div>
+        {{end}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Blogging Section -->
+<div class="short-container-wrapper">
+  <div class="row">
+    <div class="col l6 offset-l3 s12">
+      <h4>Blogging</h4>
+      <p>
+        {{ .Site.Params.blog }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Project Section -->
+<div class="short-container-wrapper">
+  <div class="row">
+    <div class="col l6 offset-l3 s12">
+      <h4>My Project</h4>
+      <p>
+        {{ .Site.Params.project }}
+      </p>
+    </div>
+  </div>
 </div>
 {{ end }}

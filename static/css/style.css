@@ -8,5 +8,70 @@ body {
     background-color: #E4EBF5;
     overflow-x: hidden;
     scroll-snap-type: y proximity;
+
+    color: black;
 }
 
+p {
+    text-align: justify;
+}
+
+.nav {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-wrapper > ul > li > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.container-wrapper {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.short-container-wrapper {
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-image {
+    height: 100px;
+    width: 200px;
+}
+
+.chip {
+    font-size: 18px !important;
+    margin: 0px 18px 18px 0px !important;
+}
+
+.page-footer {
+    background-color: rgba(25, 25, 25, 0.08) !important;
+    color: inherit !important;
+}
+
+.footer-copyright {
+    color: inherit !important;
+}

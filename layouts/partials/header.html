@@ -1,24 +1,19 @@
-<div id="nav-border" class="container">
-    <nav>
+<div class="container navbar-fixed">
+    <nav class="nav">
         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
+            <a href="#" data-target="mobile-device" class="sidenav-trigger"><i class="material-icons" data-feather="menu"></i></a>
+            <ul class="hide-on-med-and-down">
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL }}">
-                {{ if .Pre }}
-                {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-                {{ $icon }}
-                {{ end }}
                 {{ $text := print .Name | safeHTML }}
                 {{ $text }}
-                </a>></li>
+                </a></li>
                 {{ end }}
             </ul>
         </div>
     </nav>
     
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav" id="mobile-device">
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">
         {{ if .Pre }}

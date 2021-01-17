@@ -1,1 +1,34 @@
-<p class="footer text-center">Copyright (c) {{ now.Format "2006"}} Sarthak Pranesh</p>
+<style>
+    #contact-section > a {
+        margin: 20px 10px 0px 0px !important;
+    }
+</style>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 offset-l3 s12" id="contact-section">
+                <h4>Contact Me</h4>
+                <p>
+                    {{ .Site.Params.contact}}
+                </p>
+                {{ range .Site.Params.Contacts }}
+                {{ if .link }}
+                    <a class="text-lighten-3" href="{{ .link }}">
+                    {{ if .name }}
+                        {{ $icon := printf "<i data-feather=\"%s\"></i> " .name | safeHTML }}
+                        {{ $icon }}
+                    {{ end }}
+                    </a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Copyright (c) {{ now.Format "2006"}} Sarthak Pranesh
+            <a class="text-lighten-4 right" href="#!">Hugo Theme</a>
+        </div>
+    </div>
+</footer>
+      
