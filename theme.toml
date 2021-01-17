@@ -4,18 +4,12 @@
 name = "Blogfolio"
 license = "MIT"
 licenselink = "https://github.com/sarthakpranesh/Blogfolio/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
+description = "Portfolio + Blog + Project Showcase = Blogfolio Hugo theme"
+homepage = "https://github.com/sarthakpranesh/Blogfolio/"
+tags = ["Portfolio", "Blog", "Project"]
+features = ["Fully responsive", "Simple UI/UX"]
 min_version = "0.41.0"
 
 [author]
   name = "Sarthak Pranesh"
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  homepage = "https://github.com/sarthakpranesh/"
