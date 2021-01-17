@@ -1,0 +1,28 @@
+<head>
+    <!--Please keep the two meta tags below at the top to ensure proper document rendering-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Meta setup -->
+    {{ $author := .Site.author }}
+    {{ $shortAbout := .Site.shortAbout }}
+    <meta name="application-name" content="{{ $author }}" />
+    <meta name="theme-color" content="#E4EBF5" />
+    <meta name="description" content="{{ shortAbout }}" />
+    <meta name="keywords" content="{{ $author }}, Portfolio, Sarthak, Pranesh, Developer, Software Engineer" />
+    <meta name="author" content="{{ $author }}" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Adding Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <!-- Configuring Title -->
+    {{ $title := print .Site.Title " | " .Title }}
+    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    <title>{{ $title }}</title>
+</head>
