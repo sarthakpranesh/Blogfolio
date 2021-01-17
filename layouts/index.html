@@ -1,6 +1,11 @@
 {{ define "main" }}
 <style>
-  #main-container > h1, h3 {
+  #main-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #main-container > h1, h5 {
     margin: 0px;
   }
 
@@ -11,7 +16,7 @@
 <!-- Main landing section -->
 <div class="container-wrapper" id="main-container">
   <h1>{{ .Site.Params.author }}</h1>
-  <h4>{{ .Site.Params.shortAbout }}</h4>
+  <h5>{{ .Site.Params.shortAbout }}</h5>
 </div>
 
 <!-- About me section -->
