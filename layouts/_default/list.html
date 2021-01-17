@@ -1,12 +1,31 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "metadata.html" . }}
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
-    </a>
-</p>
-{{ end }}
+<style>
+    #main-container {
+        height: 40vh;
+        justify-content: flex-end;
+        align-items: center;
+
+        margin-bottom: 0px;
+    }
+</style>
+<!-- Main landing section -->
+<div class="container-wrapper" id="main-container">
+    <h1>My {{ .Title }}</h1>
+</div>
+<!-- Displaying blog list -->
+<div class="short-container-wrapper">
+    {{ range .Pages.ByPublishDate.Reverse }}
+        <div class="row">
+            <div class="col l6 offset-l3 s12">
+                <h4><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+                <div>
+                    {{ partial "metadata.html" . }}
+                </div>
+                <p>
+                    {{ .Summary }}
+                </p>    
+            </div>
+        </div>
+    {{ end }}
+</div>
 {{ end }}

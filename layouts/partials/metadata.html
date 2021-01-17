@@ -1,11 +1,34 @@
-{{ $dateTime := .PublishDate.Format "2006-01-02" }}
-{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-<i data-feather="calendar"></i>
-<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-{{ with .Params.tags }}
-<i data-feather="tag"></i>
-{{ range . }}
-{{ $href := print (absURL "tags/") (urlize .) }}
-<a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
-{{ end }}
-{{ end }}
+<style>
+    #info-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #info-wrapper > pre {
+        margin: 0px;
+    }
+
+    #info-wrapper > .chip {
+        margin: auto !important;
+        margin-bottom: 4px !important;
+        margin-left: 0px !important;
+        margin-right: 10px !important;
+    }
+</style>
+<div>
+    {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+    {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+    <div id="info-wrapper">
+        <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+        <pre> - </pre>
+        {{ with .Params.tags }}
+            {{ range . }}
+                {{ $href := print (absURL "tags/") (urlize .) }}
+                <a class="chip" href="{{ $href }}">{{ . }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>

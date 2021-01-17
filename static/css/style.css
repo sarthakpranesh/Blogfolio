@@ -3,19 +3,18 @@ html {
 }
 
 body {
-    margin: 0;
-  
     background-color: #E4EBF5;
     overflow-x: hidden;
     scroll-snap-type: y proximity;
-
     color: black;
+    min-height: 100vh;
 }
 
 p {
     text-align: justify;
     font-size: 18px;
 }
+
 
 .nav {
     background-color: #E4EBF5;

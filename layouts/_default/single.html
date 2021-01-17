@@ -1,6 +1,30 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+<style>
+    .blogContentBody > ul:not(.browser-default) li {
+        margin-left: 40px;
+        list-style-type: disc !important;
+        font-size: 18px;
+    }
+
+    .blogContentBody > .highlight > pre {
+        padding: 10px;
+        white-space: pre-wrap;       /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;
+    }
+</style>
+<div class="short-container-wrapper">
+    <div class="row">
+        <div class="col l8 offset-l2 s12">
+            <h1>{{ .Title }}</h1>
+            {{ partial "metadata.html" . }}
+            <br><br>
+            <div class="blogContentBody">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}
