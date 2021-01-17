@@ -37,6 +37,32 @@ p {
     color: black;
 }
 
+.nav-hamburger {
+    position: absolute !important;
+    left: 0px;
+    margin-top: 10px !important;
+    color: black;
+}
+
+.sidenav-overlay {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.sidenav {
+    padding-top: 20px;
+}
+
+.sidenav li > a {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.sidenav li > a > svg {
+    margin-right: 20px;
+}
+
 .container-wrapper {
     height: 90vh;
     width: 100%;

@@ -1,7 +1,9 @@
 <div class="navbar-fixed">
     <nav class="nav">
         <div class="nav-wrapper">
-            <a href="#" data-target="mobile-device" class="sidenav-trigger"><i class="material-icons" data-feather="menu"></i></a>
+            <a href="#" data-target="mobile-device" class="sidenav-trigger nav-hamburger">
+                <i data-feather="menu"></i>
+            </a>
             <ul class="hide-on-med-and-down">
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL }}">
