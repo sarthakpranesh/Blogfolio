@@ -14,10 +14,11 @@ body {
 
 p {
     text-align: justify;
+    font-size: 18px;
 }
 
 .nav {
-    background-color: transparent;
+    background-color: #E4EBF5;
     box-shadow: none;
 }
 
