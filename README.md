@@ -10,6 +10,9 @@ the root directory of your project to add the theme `Blogfolio` as a submodule:
 ```git
 git submodule add https://github.com/sarthakpranesh/Blogfolio themes/Blogfolio
 ```
+
+* You might require to initialize git using `git init` in project's root directory
+
 <br>
 
 ## Getting started 
@@ -80,12 +83,23 @@ theme = "Blogfolio"
 cd content
 mkdir -p blogs/example projects
 echo '---
-title: "Title of Content"
+title: "Title of Blog Content"
 date: 2020-07-04T11:46:58+05:30
 draft: false
 tags: ["Tag 1", "Tag 2", "Tag 3"]
-summary: "Open Source social media platform built with React Native and Firebase. Uses Google OAuth and Hermes JavaScript engine while providing intuitive design inspired by Instagram and application size of just 9 MB. It provides users the ability to create their own communities based on common interests, affiliations, etc.
----' >> blogs/example/1.md
+summary: "Open Source social media platform built with React Native and Firebase. Uses Google OAuth and Hermes JavaScript engine while providing intuitive design inspired by Instagram and application size of just 9 MB. It provides users the ability to create their own communities based on common interests, affiliations, etc."
+---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus.
+' >> blogs/example/1.md
+echo '---
+title: "Title of Project Content"
+date: 2020-07-04T11:46:58+05:30
+draft: false
+tags: ["Tag 4", "Tag 5", "Tag 6"]
+summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
+---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus.
+' >> projects/p1.md
 ```
 
 3. Run `hugo server` to test the site
