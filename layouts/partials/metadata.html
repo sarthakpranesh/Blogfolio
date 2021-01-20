@@ -23,7 +23,7 @@
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
     <div id="info-wrapper">
         <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-        <pre> - </pre>
+        <span> - </span>
         {{ with .Params.tags }}
             {{ range . }}
                 {{ $href := print (absURL "tags/") (urlize .) }}
