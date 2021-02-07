@@ -5,13 +5,12 @@ Portfolio + Blog + Project Showcase Hugo theme
 
 ## Installation 
 Follow the standard process of creating a hugo website, followed by below command from 
-the root directory of your project to add the theme `Blogfolio` as a submodule:
+the root directory of your project to add the theme `Blogfolio` as a submodule (if you haven't initialized git then run `git init` first):
 
 ```git
 git submodule add https://github.com/sarthakpranesh/Blogfolio themes/Blogfolio
 ```
 
-* You might require to initialize git using `git init` in project's root directory
 
 <br>
 
@@ -28,16 +27,18 @@ theme = "Blogfolio"
 [params]
   author = "Your Name"
   shortAbout = "Your main Occupation"
-
   about = "About You --- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
+  contact = "Contact You --- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
 
-  interests = ["React Native", "Nodejs", "Golang", "Firebase", "Expo", "Mongo Atlas", "Python", "Mininet", "HTML5", "C", "C++", "Java", "Electron", "Blogging", "Planting"]
+  [[params.homeSections]]
+    type = "chip"
+    title = "What I Do"
+    content = ["React Native", "Nodejs", "Golang", "Firebase", "Expo", "Mongo Atlas", "Python", "Mininet", "HTML5", "C", "C++", "Java", "Electron", "Blogging", "Planting"]
+  [[params.homeSections]]
+    type = "para"
+    title = "Sample Para Section"
+    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
 
-  blog = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
-
-  project = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
-
-  contact = "I would love to hear from you and have little chit chat about frameworks, languages, tools, projects, ☕️, etc. If you are curious then this website was built using a Hugo theme called Blogfolio, link can be found below."
   [[params.contacts]]
     name = "github"
     link = ""
@@ -78,7 +79,7 @@ theme = "Blogfolio"
     weight = 4
 ```
 
-2. Now run the following commands from your project's root to create necessary directories and content
+2. Now run the following commands from your project's root to create necessary directories and some sample content
 ```bash
 cd content
 mkdir -p blogs/example projects
@@ -107,7 +108,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidu
 <br>
 
 ## Adding Content
-All the content for the website should reside in the `content` directory. Whereas the folders in the `content` directory represent different sections accessible from the top navigation (if you add a new section, then make sure you add it to the site menu). All the icons used in this project are [`Feather Icons`](https://feathericons.com) so make sure you use the right `icon` name when adding more `contacts` or `menu`
+All the content for the website should reside in the `content` directory. Whereas the folders in the `content` directory represent different sections accessible from the top navigation (if you add a new section, then make sure you add it to the site menu in config file). All the icons used in this project are [`Feather Icons`](https://feathericons.com) so make sure you use the right `icon` name when adding more `contacts` or `menu`
+
+#### Home Sections
+You can add more sections on the home by defining `params.homeSection` under `params` like the following examples:
+
+Adding Chip Section:
+```toml
+[params]
+  ...
+  [[params.homeSections]]
+    type = "chip"
+    title = "Title of the Section"
+    content = ["Item 1", "Item 2", "Item 3" , "Item 4"]
+```
+Adding Paragraph Section:
+```toml
+[params]
+  ...
+  [[params.homeSections]]
+    type = "para"
+    title = "Title of the Section"
+    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
+```
 
 <br>
 
