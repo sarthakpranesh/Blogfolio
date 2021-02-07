@@ -1,0 +1,19 @@
+<style>
+    #interests {
+        margin-top: 25px;
+    }
+</style>
+<div class="row">
+    <div class="col l6 offset-l3 s12">
+        {{ if (isset . "title") }}
+            <h4>{{ .title }}</h4>
+        {{ end }}
+        <div id="interests">
+            {{ range .content }}
+                <div class="chip">
+                    {{ . }}
+                </div>
+            {{end}}
+        </div>
+    </div>
+</div>

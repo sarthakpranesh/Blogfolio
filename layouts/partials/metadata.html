@@ -7,8 +7,8 @@
         flex-wrap: wrap;
     }
 
-    #info-wrapper > pre {
-        margin: 0px;
+    #info-wrapper > span {
+        margin: 0px 10px;
     }
 
     #info-wrapper > .chip {
@@ -22,12 +22,16 @@
     {{ $dateTime := .PublishDate.Format "2006-01-02" }}
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
     <div id="info-wrapper">
-        <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-        <span> - </span>
-        {{ with .Params.tags }}
-            {{ range . }}
-                {{ $href := print (absURL "tags/") (urlize .) }}
-                <a class="chip" href="{{ $href }}">{{ . }}</a>
+        {{ if (isset .Params "date") }}
+            <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+        {{ end }}
+        {{ if (isset .Params "tags") }}
+            <span> - </span>
+            {{ with .Params.tags }}
+                {{ range . }}
+                    {{ $href := print (absURL "tags/") (urlize .) }}
+                    <a class="chip" href="{{ $href }}">{{ . }}</a>
+                {{ end }}
             {{ end }}
         {{ end }}
     </div>
