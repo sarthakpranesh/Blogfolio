@@ -64,7 +64,11 @@ code, kbd, samp {
 }
 
 .sidenav {
-    padding-top: 20px;
+    background-color: #E4EBF5 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .sidenav li > a {
