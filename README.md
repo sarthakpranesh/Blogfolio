@@ -1,7 +1,7 @@
 # Blogfolio
 Portfolio + Blog + Project Showcase Hugo theme
 
-<br>
+<br/>
 
 ## Installation 
 Follow the standard process of creating a hugo website, followed by below command from 
@@ -12,7 +12,7 @@ git submodule add https://github.com/sarthakpranesh/Blogfolio themes/Blogfolio
 ```
 
 
-<br>
+<br/>
 
 ## Getting started 
 Before you test the theme, there are a few configs you need to setup so the 
@@ -105,7 +105,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidu
 
 3. Run `hugo server` to test the site
 
-<br>
+<br/>
 
 ## Adding Content
 All the content for the website should reside in the `content` directory. Whereas the folders in the `content` directory represent different sections accessible from the top navigation (if you add a new section, then make sure you add it to the site menu in config file). All the icons used in this project are [`Feather Icons`](https://feathericons.com) so make sure you use the right `icon` name when adding more `contacts` or `menu`
@@ -116,7 +116,6 @@ You can add more sections on the home by defining `params.homeSection` under `pa
 Adding Chip Section:
 ```toml
 [params]
-  ...
   [[params.homeSections]]
     type = "chip"
     title = "Title of the Section"
@@ -125,19 +124,30 @@ Adding Chip Section:
 Adding Paragraph Section:
 ```toml
 [params]
-  ...
   [[params.homeSections]]
     type = "para"
     title = "Title of the Section"
     content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis tincidunt nisi ut posuere. Cras in fermentum elit, eleifend rutrum lectus. Suspendisse elementum finibus erat, sit amet commodo arcu ornare ac. Aliquam et mauris eget odio facilisis dapibus."
 ```
 
-<br>
+<br/>
+
+## Migrating Your Blogs from Medium
+There are going to be two ways of workflow with your blogs: Either you draft your blogs here first and then use the md files to host it on Medium or You creat your blog on Medium first and then Migrate it using the following process. I would like to automate this process if possible in future, so do reach out if you find a way to do just that.
+
+For Migrating your blogs from Medium, we wrote a small helper command called [medium-to-blogfolio](https://github.com/sarthakpranesh/medium-to-blogfolio.git) you can use it as folloing:
+
+1. `npm install medium-to-blogfolio`
+2. `medium-to-blogfolio` : make sure you input the right Medium username
+3. You'll now have the blogs in correct format locally, you can do some modifications if required and then copy them in the right directory inside the `content` folder
+
+
+<br/>
 
 ## Contributing
 All contributions are welcomed. For contributing make sure you `fork` this repo and on completion open a `pr` to the `develop` branch of this project.
 
-<br>
+<br/>
 
 ## Issues
 For any bugs, feature requests, discussions or comments please open an issue [here](https://github.com/sarthakpranesh/Blogfolio/issues)
