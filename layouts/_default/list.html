@@ -14,7 +14,9 @@
 </div>
 <!-- Displaying blog list -->
 <div class="short-container-wrapper">
-    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ $paginator := .Paginator }}
+    <!-- If there's more than one page. -->
+    {{ range $paginator.Pages }}
         <div class="row">
             <div class="col l6 offset-l3 s12">
                 <h4><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
@@ -23,9 +25,37 @@
                 </div>
                 <p>
                     {{ .Summary }}
-                </p>    
+                </p>
             </div>
         </div>
+    {{ end }}
+    {{ if gt $paginator.TotalPages 1 }}
+    <div class="row">
+        <div class="col l6 offset-l3 s12">
+            <ul class="pagination">
+                <!-- Previous page. -->
+                <li class="{{ if not $paginator.HasPrev }} pagniation-step-disable {{ end }}">
+                    <a href="{{ if $paginator.HasPrev }}{{ $paginator.Prev.URL }}{{ end }}">
+                        Prev
+                    </a>
+                </li>
+                <!-- Page numbers. -->
+                {{ range $paginator.Pagers }}
+                    <li class="pagination-item {{ if eq . $paginator }} current-pagination-item {{ end }}">
+                        <a href="{{ .URL }}" class="pagination__link">
+                        {{ .PageNumber }}
+                        </a>
+                    </li>
+                {{ end }}
+                <!-- Next page. -->
+                <li class="{{ if not $paginator.HasNext }} pagniation-step-disable {{ end }}">
+                    <a href="{{ if $paginator.HasNext }}{{ $paginator.Next.URL }}{{ end }}">
+                        Next
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     {{ end }}
 </div>
 {{ end }}

@@ -121,3 +121,24 @@ code, kbd, samp {
 .footer-copyright {
     color: inherit !important;
 }
+
+.pagination {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagniation-step-disable {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.pagination__item {
+
+}
+
+.current-pagination-item {
+    font-weight: bolder !important;
+}

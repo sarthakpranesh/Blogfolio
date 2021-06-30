@@ -6,6 +6,7 @@ homepage = "https://github.com/sarthakpranesh/Blogfolio/"
 tags = ["Portfolio", "Blog", "Project"]
 features = ["Fully responsive", "Simple UI/UX"]
 min_version = "0.41.0"
+paginate = 10
 
 [author]
   name = "Sarthak Pranesh"
