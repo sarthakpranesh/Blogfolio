@@ -1,13 +1,13 @@
 name = "Blogfolio"
+license = "MIT"
+licenselink = "https://github.com/sarthakpranesh/Blogfolio/blob/master/LICENSE"
 description = "Portfolio + Blog + Project Showcase = Blogfolio Hugo theme"
 homepage = "https://github.com/sarthakpranesh/Blogfolio/"
 tags = ["portfolio", "blog", "project", "simple", "responsive", "mobile", "personal", "fast"]
 features = ["responsive", "simple", "light", "fast", "paginated"]
-license = "MIT"
-licenselink = "https://github.com/sarthakpranesh/Blogfolio/blob/master/LICENSE"
 min_version = "0.72"
 paginate = 10
 
 [author]
   name = "Sarthak Pranesh"
-  homepage = "https://github.com/sarthakpranesh/"
+  homepage = "https://sarthakpranesh.vercel.app/"
