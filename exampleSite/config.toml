@@ -1,0 +1,44 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Blogfolio"
+theme = "Blogfolio"
+
+# Details for the home page
+# Also author and shortAbout will be used in meta data for setting up "application-name" and "description"
+[params]
+  author = "Blogfolio"
+  shortAbout = "A Hugo Theme"
+  about = "Blogfolio aims to be light, simple, fast and responsive solution for all your personal professional needs of showcasing projects, blogging and portfolio."
+  contact = "You can find Blogfolio on both Hugo Theme website and on github :>"
+
+  [[params.homeSections]]
+    type = "chip"
+    title = "What I Do"
+    content = ["Portfolio", "Blog", "Project", "Simple", "Responsive", "Fast", "Mobile", "Personal"]
+  
+  [[params.contacts]]
+    name = "github"
+    link = "https://github.com/sarthakpranesh/Blogfolio"
+
+# Top Menu Nav
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blogs"
+    pre = "pen-tool"
+    url = "/blogs/"
+    weight = 2
+  [[menu.main]]
+    name = "Projects"
+    pre = "code"
+    url = "/projects/"
+    weight = 3
+  [[menu.main]]
+    name = "Tags"
+    pre = "tag"
+    url = "/tags/"
+    weight = 4
