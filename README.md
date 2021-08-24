@@ -1,6 +1,6 @@
 # Blogfolio
 Portfolio + Blog + Project Showcase Hugo theme
-Blogfolio aims to be light, simple, fast and responsive solution for all your personal professional needs of showcasing projects, blogging and portfolio.
+Blogfolio aims to be light, simple, fast and responsive solution for all your personal professional needs of showcasing projects, blogging and portfolio with dark mode.
 
 <br/>
 
