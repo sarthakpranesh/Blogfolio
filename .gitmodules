@@ -1,0 +1,3 @@
+[submodule "exampleSite/themes/Blogfolio"]
+	path = exampleSite/themes/Blogfolio
+	url = https://github.com/sarthakpranesh/Blogfolio
