@@ -5,10 +5,16 @@ html {
 
 body {
     background-color: #E4EBF5;
+    color: black !important;
     overflow-x: hidden;
     scroll-snap-type: y proximity;
-    color: black;
     min-height: 100vh;
+}
+
+body.dark-mode,
+body.dark-mode main * {
+    background-color: black !important;
+    color: #E4EBF5 !important;
 }
 
 p {
@@ -31,10 +37,19 @@ code, kbd, samp {
     background-color: #272822;
 }
 
-
-.nav {
+body .nav {
     background-color: #E4EBF5;
     box-shadow: none;
+}
+body.dark-mode .nav {
+    background-color: black;
+}
+
+body nav ul a {
+    color: black !important;
+}
+body.dark-mode nav ul a {
+    color: #E4EBF5 !important;
 }
 
 .nav-wrapper {
@@ -49,14 +64,29 @@ code, kbd, samp {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: black;
 }
 
 .nav-hamburger {
     position: absolute !important;
     left: 0px;
     margin-top: 10px !important;
+}
+
+.nav-theme-toggler {
+    position: absolute !important;
+    right: 10px;
+    margin-top: 10px !important;
+}
+
+body .nav-theme-toggler {
     color: black;
+}
+body.dark-mode .nav-theme-toggler {
+    color: #E4EBF5
+}
+
+.nav-theme-toggler:hover {
+    cursor: pointer;
 }
 
 .sidenav-overlay {
@@ -128,6 +158,12 @@ code, kbd, samp {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+body .pagination li a {
+    color: black;
+}
+body.dark-mode .pagination li a {
+    color: #E4EBF5 !important;
 }
 
 .pagniation-step-disable {
