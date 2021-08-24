@@ -1,0 +1,180 @@
+html {
+    font-family: 'Bree Serif', serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: #E4EBF5;
+    color: black !important;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
+    min-height: 100vh;
+}
+
+body.dark-mode,
+body.dark-mode main * {
+    background-color: black !important;
+    color: #E4EBF5 !important;
+}
+
+p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+pre {
+    background-color: #272822;
+    padding: 10px;
+}
+
+code, kbd, samp {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;
+    color: white;
+    background-color: #272822;
+}
+
+body .nav {
+    background-color: #E4EBF5;
+    box-shadow: none;
+}
+body.dark-mode .nav {
+    background-color: black;
+}
+
+body nav ul a {
+    color: black !important;
+}
+body.dark-mode nav ul a {
+    color: #E4EBF5 !important;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-wrapper > ul > li > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-hamburger {
+    position: absolute !important;
+    left: 0px;
+    margin-top: 10px !important;
+}
+
+.nav-theme-toggler {
+    position: absolute !important;
+    right: 10px;
+    margin-top: 10px !important;
+}
+
+body .nav-theme-toggler {
+    color: black;
+}
+body.dark-mode .nav-theme-toggler {
+    color: #E4EBF5
+}
+
+.nav-theme-toggler:hover {
+    cursor: pointer;
+}
+
+.sidenav-overlay {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.sidenav {
+    background-color: #E4EBF5 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sidenav li > a {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.sidenav li > a > svg {
+    margin-right: 20px;
+}
+
+.container-wrapper {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.short-container-wrapper {
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-image {
+    height: 100px;
+    width: 200px;
+}
+
+.chip {
+    font-size: 18px !important;
+    margin: 0px 18px 18px 0px !important;
+}
+
+.page-footer {
+    background-color: rgba(25, 25, 25, 0.08) !important;
+    color: inherit !important;
+}
+
+.footer-copyright {
+    color: inherit !important;
+}
+
+.pagination {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+body .pagination li a {
+    color: black;
+}
+body.dark-mode .pagination li a {
+    color: #E4EBF5 !important;
+}
+
+.pagniation-step-disable {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.pagination__item {
+
+}
+
+.current-pagination-item {
+    font-weight: bolder !important;
+}

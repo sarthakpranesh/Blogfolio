@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tag 3 on Blogfolio</title>
+    <link>https://example.com/tags/tag-3/</link>
+    <description>Recent content in Tag 3 on Blogfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jul 2020 11:46:58 +0530</lastBuildDate><atom:link href="https://example.com/tags/tag-3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Title of Blog Content</title>
+      <link>https://example.com/blogs/example/1/</link>
+      <pubDate>Sat, 04 Jul 2020 11:46:58 +0530</pubDate>
+      
+      <guid>https://example.com/blogs/example/1/</guid>
+      <description>Open Source social media platform built with React Native and Firebase. Uses Google OAuth and Hermes JavaScript engine while providing intuitive design inspired by Instagram and application size of just 9 MB. It provides users the ability to create their own communities based on common interests, affiliations, etc.</description>
+    </item>
+    
+  </channel>
+</rss>
