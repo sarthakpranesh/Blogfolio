@@ -71,13 +71,17 @@ body.dark-mode nav ul a {
     left: 0px;
     margin-top: 10px !important;
 }
+body .nav-hamburger {
+    color: black;
+}
+body.dark-mode .nav-hamburger {
+    color: #E4EBF5
+}
 
 .nav-theme-toggler {
     position: absolute !important;
     right: 10px;
-    margin-top: 10px !important;
 }
-
 body .nav-theme-toggler {
     color: black;
 }
